@@ -4,31 +4,31 @@
     "ownerName": "김재윤",
     "ownerEmail": "123@naver.com",
     "ownerPassword": "123",
-    "owerPhoneNumber": "01011111111",
-    "owerAddress": "서울 영등포구 영신로 166"
+    "ownerPhoneNumber": "01011111111",
+    "ownerAddress": "서울 영등포구 영신로 166"
   },
   {
     "id": 2,
     "ownerName": "김희준",
     "ownerEmail": "234@naver.com",
     "ownerPassword": "234",
-    "owerPhoneNumber": "01022222222",
-    "owerAddress": "서울 영등포구 영신로 162"
+    "ownerPhoneNumber": "01022222222",
+    "ownerAddress": "서울 영등포구 영신로 162"
   },
   {
     "id": 3,
     "ownerName": "김재원",
     "ownerEmail": "345@naver.com",
     "ownerPassword": "345",
-    "owerPhoneNumber": "01033333333",
-    "owerAddress": "서울 영등포구 영신로 175"
+    "ownerPhoneNumber": "01033333333",
+    "ownerAddress": "서울 영등포구 영신로 175"
   },
   {
     "id": 4,
     "ownerName": "이원일",
     "ownerEmail": "456@naver.com",
     "ownerPassword": "456",
-    "owerPhoneNumber": "01044444444",
-    "owerAddress": "서울 영등포구 영신로47길 9-1"
+    "ownerPhoneNumber": "01044444444",
+    "ownerAddress": "서울 영등포구 영신로47길 9-1"
   }
 ]
