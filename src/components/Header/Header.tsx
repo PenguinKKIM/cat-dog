@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import HeaderNav from './HeaderNav';
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { ButtonPrimary } from '../Buttons/Buttons';
 import { useAuthStore } from '../../store/useAuthStore';
 
@@ -10,6 +10,7 @@ function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const loggedInUser = useAuthStore((state) => state.loggedInUser);
   const logout = useAuthStore((state) => state.logout);
+  const navigate = useNavigate()
 
   const handelMenu = () => {
     setToggleMenu(!toggleMenu);
@@ -25,6 +26,11 @@ function Header() {
 
   const handleLogout = () => {
     logout();
+    navigate("/")
+  };
+
+  const handleLogIn = () => {
+    navigate("/login")
   };
 
   return (
@@ -51,9 +57,7 @@ function Header() {
       {loggedInUser ? (
         <ButtonPrimary onClick={handleLogout}>로그아웃</ButtonPrimary>
       ) : (
-        <Link to="/login">
-          <ButtonPrimary>로그인</ButtonPrimary>
-        </Link>
+        <ButtonPrimary onClick={handleLogIn}>로그인</ButtonPrimary>
       )}
     </HeaderContainer>
   );
@@ -66,7 +70,7 @@ const HeaderContainer = styled.header<{ isScrolled: boolean }>`
 
   @media (min-width: 1024px) {
     background-color: ${({ isScrolled }) =>
-      isScrolled ? 'rgba(255, 255, 255, 0.5)' : 'var(--white)'};
+    isScrolled ? 'rgba(255, 255, 255, 0.5)' : 'var(--white)'};
   }
 `;
 
