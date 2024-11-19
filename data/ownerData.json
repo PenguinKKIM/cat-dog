@@ -30,5 +30,13 @@
     "ownerPassword": "456",
     "ownerPhoneNumber": "01044444444",
     "ownerAddress": "서울 영등포구 영신로47길 9-1"
+  },
+  {
+    "id": 5,
+    "ownerName": "김밥",
+    "ownerEmail": "567@naver.com",
+    "ownerPassword": "567",
+    "ownerPhoneNumber": "01044444444",
+    "ownerAddress": "서울 영등포구 영신로47길 9-1"
   }
 ]
