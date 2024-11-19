@@ -1,11 +1,16 @@
-import styled from "styled-components";
-import HeaderNav from "./HeaderNav";
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import styled from 'styled-components';
+import HeaderNav from './HeaderNav';
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { ButtonPrimary } from '../Buttons/Buttons';
+import { useAuthStore } from '../../store/useAuthStore';
 
 function Header() {
-  const [toggleMenu, setToggleMenu] = useState(true);
+  const [toggleMenu, setToggleMenu] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const loggedInUser = useAuthStore((state) => state.loggedInUser);
+  const logout = useAuthStore((state) => state.logout);
+
   const handelMenu = () => {
     setToggleMenu(!toggleMenu);
   };
@@ -14,17 +19,20 @@ function Header() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 100);
     };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleLogout = () => {
+    logout();
+  };
 
   return (
     <HeaderContainer isScrolled={isScrolled}>
       <HeaderStyle>
         <HeaderUl>
           <li>
-            <Link to={"/"}>
+            <Link to={'/'}>
               <HeaderLogo src="/images/logos/logo_color.png" alt="댕냥꽁냥 로고" />
             </Link>
           </li>
@@ -32,10 +40,21 @@ function Header() {
             <HeaderNav toggleMenu={toggleMenu} />
           </li>
           <li>
-            <HeaderSvg src="/images/logos/dot-horizontal-filled.svg" alt="쩜쩜쩜" onClick={handelMenu} />
+            <HeaderSvg
+              src="/images/logos/dot-horizontal-filled.svg"
+              alt="쩜쩜쩜"
+              onClick={handelMenu}
+            />
           </li>
         </HeaderUl>
       </HeaderStyle>
+      {loggedInUser ? (
+        <ButtonPrimary onClick={handleLogout}>로그아웃</ButtonPrimary>
+      ) : (
+        <Link to="/login">
+          <ButtonPrimary>로그인</ButtonPrimary>
+        </Link>
+      )}
     </HeaderContainer>
   );
 }
@@ -46,7 +65,8 @@ const HeaderContainer = styled.header<{ isScrolled: boolean }>`
   z-index: 1000;
 
   @media (min-width: 1024px) {
-    background-color: ${({ isScrolled }) => (isScrolled ? "rgba(255, 255, 255, 0.5)" : "ver(--white)")};
+    background-color: ${({ isScrolled }) =>
+      isScrolled ? 'rgba(255, 255, 255, 0.5)' : 'var(--white)'};
   }
 `;
 
