@@ -1,0 +1,7 @@
+[
+  { "id": 1, "shopName": "꿈꾸는 강아지", "type": "Dog" },
+  { "id": 2, "shopName": "베이비펫샵", "type": "Cat" },
+  { "id": 3, "shopName": "슈슈펫살롱", "type": "Bird" },
+  { "id": 4, "shopName": "그루밍하와이", "type": "Bird" },
+  { "id": 5, "shopName": "도그넷 애견미용실", "type": "Bird" }
+]

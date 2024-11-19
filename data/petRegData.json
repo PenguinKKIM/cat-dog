@@ -1,0 +1,56 @@
+[
+  {
+    "ownerId": 1,
+    "id": 1,
+    "petName": "루밍",
+    "petCatOrDog": "cat",
+    "petBreed": "브리티쉬 숏헤어",
+    "petGender": "female",
+    "petIsNeutering": true
+  },
+  {
+    "ownerId": 1,
+    "id": 2,
+    "petName": "르렁",
+    "petCatOrDog": "cat",
+    "petBreed": "브리티쉬 숏헤어",
+    "petGender": "female",
+    "petIsNeutering": true
+  },
+  {
+    "ownerId": 2,
+    "id": 3,
+    "petName": "토로",
+    "petCatOrDog": "dog",
+    "petBreed": "말티즈",
+    "petGender": "male",
+    "petIsNeutering": true
+  },
+  {
+    "ownerId": 2,
+    "id": 4,
+    "petName": "로또",
+    "petCatOrDog": "cat",
+    "petBreed": "코리안 숏헤어",
+    "petGender": "male",
+    "petIsNeutering": true
+  },
+  {
+    "ownerId": 3,
+    "id": 5,
+    "petName": "망고",
+    "petCatOrDog": "dog",
+    "petBreed": "미디엄 푸들",
+    "petGender": "female",
+    "petIsNeutering": false
+  },
+  {
+    "ownerId": 4,
+    "id": 6,
+    "petName": "뽀또",
+    "petCatOrDog": "cat",
+    "petBreed": "아비시니안",
+    "petGender": "male",
+    "petIsNeutering": true
+  }
+]
