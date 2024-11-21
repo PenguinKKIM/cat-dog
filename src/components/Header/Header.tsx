@@ -53,12 +53,12 @@ function Header() {
             />
           </li>
         </HeaderUl>
+        {loggedInUser ? (
+          <ButtonPrimary onClick={handleLogout}>로그아웃</ButtonPrimary>
+        ) : (
+          <ButtonPrimary onClick={handleLogIn}>로그인</ButtonPrimary>
+        )}
       </HeaderStyle>
-      {loggedInUser ? (
-        <ButtonPrimary onClick={handleLogout}>로그아웃</ButtonPrimary>
-      ) : (
-        <ButtonPrimary onClick={handleLogIn}>로그인</ButtonPrimary>
-      )}
     </HeaderContainer>
   );
 }
