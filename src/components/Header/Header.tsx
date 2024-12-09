@@ -1,16 +1,12 @@
 import styled from 'styled-components';
 import HeaderNav from './HeaderNav';
 import { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { ButtonPrimary } from '../Buttons/Buttons';
-import { useAuthStore } from '../../store/useAuthStore';
+import { Link } from 'react-router-dom';
+import LoginOutButton from '../Buttons/LoginOutButton';
 
 function Header() {
   const [toggleMenu, setToggleMenu] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const loggedInUser = useAuthStore((state) => state.loggedInUser);
-  const logout = useAuthStore((state) => state.logout);
-  const navigate = useNavigate()
 
   const handelMenu = () => {
     setToggleMenu(!toggleMenu);
@@ -23,15 +19,6 @@ function Header() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const handleLogout = () => {
-    logout();
-    navigate("/")
-  };
-
-  const handleLogIn = () => {
-    navigate("/login")
-  };
 
   return (
     <HeaderContainer isScrolled={isScrolled}>
@@ -52,12 +39,10 @@ function Header() {
               onClick={handelMenu}
             />
           </li>
+          <li>
+            <LoginOutButton />
+          </li>
         </HeaderUl>
-        {loggedInUser ? (
-          <ButtonPrimary onClick={handleLogout}>로그아웃</ButtonPrimary>
-        ) : (
-          <ButtonPrimary onClick={handleLogIn}>로그인</ButtonPrimary>
-        )}
       </HeaderStyle>
     </HeaderContainer>
   );

@@ -15,15 +15,19 @@ function MainBanners({ isHovered, isButtonName }: MainBannerProps) {
       </NearByShopBanner>
       <GalleryShopBanner isHovered={isHovered} isButtonName={isButtonName}>
         갤러리 구경하기
+        <p> 미용사와 유저들의 귀여운 사진을 구경하세요</p>
       </GalleryShopBanner>
       <PetRegBanner isHovered={isHovered} isButtonName={isButtonName}>
         반려동물 등록하기
+        <p> 반려동물을 등록하세요</p>
       </PetRegBanner>
       <ReserveShopBanner isHovered={isHovered} isButtonName={isButtonName}>
         미용 예약하기
+        <p> 미용사와 유저들의 귀여운 사진을 구경하세요</p>
       </ReserveShopBanner>
       <MyPageBanner isHovered={isHovered} isButtonName={isButtonName}>
         마이 페이지
+        <p> 미용사와 유저들의 귀여운 사진을 구경하세요</p>
       </MyPageBanner>
     </MainBannerContainer>
   );
@@ -56,29 +60,32 @@ const MainBanner = styled.div<MainBannerProps>`
   height: 10rem;
 `;
 
-const NearByShopBanner = styled(MainBanner)<MainBannerProps>`
-  transition: opacity 5s ease, visibility 5s ease;
+const NearByShopBanner = styled(MainBanner) <MainBannerProps>`
   background-color: aliceblue;
   display: ${(props) => (props.isHovered && props.isButtonName === "nearShop" ? "block" : "none")};
 `;
 
-const GalleryShopBanner = styled(MainBanner)<MainBannerProps>`
+const GalleryShopBanner = styled(MainBanner) <MainBannerProps>`
+  background-color: blue;
   display: ${(props) => (props.isHovered && props.isButtonName === "gallery" ? "block" : "none")};
 `;
 
-const PetRegBanner = styled(MainBanner)<MainBannerProps>`
+const PetRegBanner = styled(MainBanner) <MainBannerProps>`
+  background-color: violet;
   display: ${(props) => (props.isHovered && props.isButtonName === "petReg" ? "block" : "none")};
 `;
 
-const ReserveShopBanner = styled(MainBanner)<MainBannerProps>`
+const ReserveShopBanner = styled(MainBanner) <MainBannerProps>`
+  background-color: yellow;
   display: ${(props) => (props.isHovered && props.isButtonName === "reserve" ? "block" : "none")};
 `;
-const MyPageBanner = styled(MainBanner)<MainBannerProps>`
+const MyPageBanner = styled(MainBanner) <MainBannerProps>`
+  background-color: red;
   display: ${(props) => (props.isHovered && props.isButtonName === "myPage" ? "block" : "none")};
 `;
 
-const DefaultMainBanner = styled(MainBanner)<MainBannerProps>`
-  transition: opacity 5s ease, visibility 5s ease;
+const DefaultMainBanner = styled(MainBanner) <MainBannerProps>`
+  background-color: skyblue;
   display: ${(props) => (props.isHovered ? "none" : "block")};
 `;
 

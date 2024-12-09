@@ -64,6 +64,8 @@ const InnerNavLi = styled.li`
   gap: 1rem;
 
   font-weight: 600;
+  color: var(--sub-color);
+
   padding: 8px 16px;
 
   &:hover {
@@ -88,6 +90,7 @@ const InnerNavLi = styled.li`
   }
 
   @media (min-width: 1024px) {
+    gap: 8px;
     &:nth-child(1n) {
       border-bottom: none;
     }
