@@ -1,7 +1,56 @@
 [
-  { "id": 1, "shopName": "꿈꾸는 강아지", "type": "Dog" },
-  { "id": 2, "shopName": "베이비펫샵", "type": "Cat" },
-  { "id": 3, "shopName": "슈슈펫살롱", "type": "Bird" },
-  { "id": 4, "shopName": "그루밍하와이", "type": "Bird" },
-  { "id": 5, "shopName": "도그넷 애견미용실", "type": "Bird" }
+  {
+    "shopOwnerId": 1,
+    "id": 1,
+    "shopName": "꿈나라 애견샵",
+    "shopImage": "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FwpIr2%2FbtsKOy5aAz4%2F35DkmJjblEKkjlSfCdkm80%2Fimg.jpg",
+    "shopAddress": "경기도 의정부시",
+    "shopPhoneNum": "0311231234",
+    "shopLike": 300
+  },
+  {
+    "shopOwnerId": 2,
+    "id": 2,
+    "shopName": "우리집 강아지",
+    "shopImage": "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbOCRZo%2FbtsKOp1zleK%2FB48y8PE22XDAMUSxP6xRxK%2Fimg.jpg",
+    "shopAddress": "경기도 의정부시",
+    "shopPhoneNum": "0312342345",
+    "shopLike": 300
+  },
+  {
+    "shopOwnerId": 3,
+    "id": 3,
+    "shopName": "복슬 망아지",
+    "shopImage": "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FoMSxF%2FbtsKNp9rDpl%2F7P3ukIctgxKNfbytANnE0k%2Fimg.jpg",
+    "shopAddress": "경기도 의정부시",
+    "shopPhoneNum": "0133453456",
+    "shopLike": 300
+  },
+  {
+    "shopOwnerId": 4,
+    "id": 4,
+    "shopName": "냥냥이랑 댕댕이랑",
+    "shopImage": "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FnYLfb%2FbtsKOUmDGbt%2FcRzuzEjXRWaM2Bx7M6OKr1%2Fimg.jpg",
+    "shopAddress": "경기도 의정부시",
+    "shopPhoneNum": "0314564567",
+    "shopLike": 300
+  },
+  {
+    "shopOwnerId": 4,
+    "id": 5,
+    "shopName": "꼬물꼬물",
+    "shopImage": "",
+    "shopAddress": "경기도 의정부시",
+    "shopPhoneNum": "0315675678",
+    "shopLike": 300
+  },
+  {
+    "shopOwnerId": 5,
+    "id": 6,
+    "shopName": "사랑해 펫샵",
+    "shopImage": "",
+    "shopAddress": "경기도 의정부시",
+    "shopPhoneNum": "0316786789",
+    "shopLike": 300
+  }
 ]
