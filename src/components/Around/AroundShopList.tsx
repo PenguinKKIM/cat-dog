@@ -1,6 +1,9 @@
+import shopListData from '../../../data/shopListData.json';
 import styled from "styled-components";
 
 function AroundShopList() {
+  const defaultImage = "https://via.placeholder.com/80?text=No+Image";
+
   return (
     <>
       <ShoplistUl>
@@ -10,101 +13,21 @@ function AroundShopList() {
             <li>가까운 거리순</li>
           </ShopListNavUl>
         </ShopListNav>
-        <ShopListLi>
-          <ShopInfo>
-            <img src="/images/shop-1.jpg" alt="샵 이미지" />
-            <div>
-              <h1>샵 이름(내 위치에서M)</h1>
-              <span>서울시 금천구 가산 디지털1로 168 310호</span>
-            </div>
-          </ShopInfo>
-          <ShopLikeRes>
-            <div>
-              <img src="/images/icons/heart-regular.svg" alt="하트 아이콘" />
-              <span>찜 하기</span>
-            </div>
-            <div>
-              <img src="/images/icons/calendar-check-regular.svg" alt="예약 아이콘" />
-              <span>예약하기</span>
-            </div>
-          </ShopLikeRes>
-        </ShopListLi>
-        <ShopListLi>
-          <ShopInfo>
-            <img src="/images/shop-1.jpg" alt="샵 이미지" />
-            <div>
-              <h1>샵 이름(내 위치에서M)</h1>
-              <span>서울시 금천구 가산 디지털1로 168 310호</span>
-            </div>
-          </ShopInfo>
-          <ShopLikeRes>
-            <div>
-              <img src="/images/icons/heart-regular.svg" alt="하트 아이콘" />
-              <span>찜 하기</span>
-            </div>
-            <div>
-              <img src="/images/icons/calendar-check-regular.svg" alt="예약 아이콘" />
-              <span>예약하기</span>
-            </div>
-          </ShopLikeRes>
-        </ShopListLi>{" "}
-        <ShopListLi>
-          <ShopInfo>
-            <img src="/images/shop-1.jpg" alt="샵 이미지" />
-            <div>
-              <h1>샵 이름(내 위치에서M)</h1>
-              <span>서울시 금천구 가산 디지털1로 168 310호</span>
-            </div>
-          </ShopInfo>
-          <ShopLikeRes>
-            <div>
-              <img src="/images/icons/heart-regular.svg" alt="하트 아이콘" />
-              <span>찜 하기</span>
-            </div>
-            <div>
-              <img src="/images/icons/calendar-check-regular.svg" alt="예약 아이콘" />
-              <span>예약하기</span>
-            </div>
-          </ShopLikeRes>
-        </ShopListLi>{" "}
-        <ShopListLi>
-          <ShopInfo>
-            <img src="/images/shop-1.jpg" alt="샵 이미지" />
-            <div>
-              <h1>샵 이름(내 위치에서M)</h1>
-              <span>서울시 금천구 가산 디지털1로 168 310호</span>
-            </div>
-          </ShopInfo>
-          <ShopLikeRes>
-            <div>
-              <img src="/images/icons/heart-regular.svg" alt="하트 아이콘" />
-              <span>찜 하기</span>
-            </div>
-            <div>
-              <img src="/images/icons/calendar-check-regular.svg" alt="예약 아이콘" />
-              <span>예약하기</span>
-            </div>
-          </ShopLikeRes>
-        </ShopListLi>
-        <ShopListLi>
-          <ShopInfo>
-            <img src="/images/shop-1.jpg" alt="샵 이미지" />
-            <div>
-              <h1>샵 이름(내 위치에서M)</h1>
-              <span>서울시 금천구 가산 디지털1로 168 310호</span>
-            </div>
-          </ShopInfo>
-          <ShopLikeRes>
-            <div>
-              <img src="/images/icons/heart-regular.svg" alt="하트 아이콘" />
-              <span>찜 하기</span>
-            </div>
-            <div>
-              <img src="/images/icons/calendar-check-regular.svg" alt="예약 아이콘" />
-              <span>예약하기</span>
-            </div>
-          </ShopLikeRes>
-        </ShopListLi>
+        {shopListData.map((shop) => (
+          <ShopListLi key={shop.id}>
+            <ShopInfo>
+              <img
+                src={shop.shopImage || defaultImage}
+                alt={shop.shopName}
+              />
+              <div>
+                <h1>{shop.shopName}</h1>
+                <span>{shop.shopAddress}</span>
+                <span>전화번호: {shop.shopPhoneNum}</span>
+              </div>
+            </ShopInfo>
+          </ShopListLi>
+        ))}
       </ShoplistUl>
     </>
   );
@@ -172,25 +95,25 @@ const ShopInfo = styled.div`
   }
 `;
 
-const ShopLikeRes = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  gap: 16px;
-  div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    img {
-      width: 16px;
-      height: 16px;
-    }
-    &:hover {
-      cursor: pointer;
-      font-weight: 600;
-      filter: invert(46%) sepia(98%) saturate(493%) hue-rotate(333deg) brightness(94%) contrast(94%);
-    }
-  }
-`;
+// const ShopLikeRes = styled.div`
+//   display: flex;
+//   justify-content: flex-end;
+//   gap: 16px;
+//   div {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     gap: 8px;
+//     img {
+//       width: 16px;
+//       height: 16px;
+//     }
+//     &:hover {
+//       cursor: pointer;
+//       font-weight: 600;
+//       filter: invert(46%) sepia(98%) saturate(493%) hue-rotate(333deg) brightness(94%) contrast(94%);
+//     }
+//   }
+// `;
 
 export default AroundShopList;
